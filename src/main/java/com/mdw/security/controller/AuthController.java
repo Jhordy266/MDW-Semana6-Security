@@ -1,5 +1,8 @@
 package com.mdw.security.controller;
 
+import com.mdw.security.entity.Usuario;
+import com.mdw.security.repository.UsuarioRepository;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,6 +11,12 @@ import java.security.Principal;
 
 @Controller
 public class AuthController {
+
+    private final UsuarioRepository usuarioRepository;
+
+    public AuthController(UsuarioRepository usuarioRepository) {
+        this.usuarioRepository = usuarioRepository;
+    }
 
     @GetMapping("/login")
     public String login() {
@@ -21,7 +30,14 @@ public class AuthController {
 
     @GetMapping("/inicio")
     public String inicio(Principal principal, Model model) {
-        model.addAttribute("username", principal.getName());
+
+        Usuario usuario = usuarioRepository
+                .findByUsername(principal.getName())
+                .orElseThrow(() ->
+                        new RuntimeException("Usuario no encontrado"));
+
+        model.addAttribute("usuario", usuario);
+
         return "inicio";
     }
 }

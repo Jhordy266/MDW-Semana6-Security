@@ -1,30 +1,180 @@
-<!-- inicio.html -->
 <!DOCTYPE html>
 <html lang="es"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
 <head>
+
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Inicio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          th:href="@{/css/estilos.css}">
+
 </head>
+
 <body>
 
-<h1>Inicio</h1>
+<nav class="navbar navbar-dark bg-dark">
 
-<p>
-    Bienvenido:
-    <span th:text="${username}"></span>
-</p>
+    <div class="container">
 
-<ul>
-    <li><a href="/libros">Ver libros</a></li>
-    <li><a href="/buscar">Buscar libros</a></li>
-    <li><a href="/perfil">Mi perfil</a></li>
-    <li><a href="/admin/libros">Administrar libros</a></li>
-</ul>
+        <a class="navbar-brand"
+           th:href="@{/inicio}">
+            Biblioteca
+        </a>
 
-<form action="/logout" method="post">
-    <button type="submit">Cerrar sesión</button>
-</form>
+        <div class="d-flex align-items-center text-white">
+
+            <span class="usuario-navbar">
+                Usuario:
+                <strong sec:authentication="name"></strong>
+            </span>
+
+            <form th:action="@{/logout}"
+                  method="post">
+
+                <button class="btn btn-outline-light btn-sm"
+                        type="submit">
+                    Cerrar sesión
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<div class="container contenedor-principal">
+
+    <div class="mb-4">
+
+        <h2>
+            Bienvenido,
+            <span th:text="${usuario.nombre}">
+                Usuario
+            </span>
+        </h2>
+
+        <p class="text-muted">
+            Seleccione una opción del sistema.
+        </p>
+
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+
+            <div class="card shadow-sm card-opcion">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        Ver libros
+                    </h5>
+
+                    <p class="card-text">
+                        Visualizar los libros registrados.
+                    </p>
+
+                    <a th:href="@{/libros}"
+                       class="btn btn-primary">
+                        Ver libros
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card shadow-sm card-opcion">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        Buscar libros
+                    </h5>
+
+                    <p class="card-text">
+                        Buscar libros por título o autor.
+                    </p>
+
+                    <a th:href="@{/buscar}"
+                       class="btn btn-primary">
+                        Buscar
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card shadow-sm card-opcion">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        Mi perfil
+                    </h5>
+
+                    <p class="card-text">
+                        Consultar la información de su cuenta.
+                    </p>
+
+                    <a th:href="@{/perfil}"
+                       class="btn btn-primary">
+                        Ver perfil
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4"
+             sec:authorize="hasAuthority('ROLE_ADMIN')">
+
+            <div class="card shadow-sm card-opcion">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        Administrar libros
+                    </h5>
+
+                    <p class="card-text">
+                        Registrar, modificar o eliminar libros.
+                    </p>
+
+                    <a th:href="@{/admin/libros}"
+                       class="btn btn-danger">
+                        Administrar
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>

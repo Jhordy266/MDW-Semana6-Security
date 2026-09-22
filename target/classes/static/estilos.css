@@ -1,0 +1,36 @@
+body {
+    background-color: #f5f6f8;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.contenedor-principal {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.card-opcion {
+    height: 100%;
+    transition: 0.2s;
+}
+
+.card-opcion:hover {
+    transform: translateY(-3px);
+}
+
+.tabla-contenedor {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.login-card {
+    max-width: 420px;
+    margin: 80px auto;
+}
+
+.usuario-navbar {
+    margin-right: 15px;
+}
