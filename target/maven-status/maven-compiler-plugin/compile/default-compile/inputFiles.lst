@@ -1,0 +1,14 @@
+C:\Users\Jhordy\Documents\7MO-CICLO\DESARROLLO-WEB-INTEGRADO\SEMANA6\MDW-Semana6-Security\src\main\java\com\mdw\security\config\DataInitializer.java
+C:\Users\Jhordy\Documents\7MO-CICLO\DESARROLLO-WEB-INTEGRADO\SEMANA6\MDW-Semana6-Security\src\main\java\com\mdw\security\config\SecurityConfig.java
+C:\Users\Jhordy\Documents\7MO-CICLO\DESARROLLO-WEB-INTEGRADO\SEMANA6\MDW-Semana6-Security\src\main\java\com\mdw\security\controller\AdminLibroController.java
+C:\Users\Jhordy\Documents\7MO-CICLO\DESARROLLO-WEB-INTEGRADO\SEMANA6\MDW-Semana6-Security\src\main\java\com\mdw\security\controller\AuthController.java
+C:\Users\Jhordy\Documents\7MO-CICLO\DESARROLLO-WEB-INTEGRADO\SEMANA6\MDW-Semana6-Security\src\main\java\com\mdw\security\controller\LibroController.java
+C:\Users\Jhordy\Documents\7MO-CICLO\DESARROLLO-WEB-INTEGRADO\SEMANA6\MDW-Semana6-Security\src\main\java\com\mdw\security\controller\PerfilController.java
+C:\Users\Jhordy\Documents\7MO-CICLO\DESARROLLO-WEB-INTEGRADO\SEMANA6\MDW-Semana6-Security\src\main\java\com\mdw\security\entity\Libro.java
+C:\Users\Jhordy\Documents\7MO-CICLO\DESARROLLO-WEB-INTEGRADO\SEMANA6\MDW-Semana6-Security\src\main\java\com\mdw\security\entity\Rol.java
+C:\Users\Jhordy\Documents\7MO-CICLO\DESARROLLO-WEB-INTEGRADO\SEMANA6\MDW-Semana6-Security\src\main\java\com\mdw\security\entity\Usuario.java
+C:\Users\Jhordy\Documents\7MO-CICLO\DESARROLLO-WEB-INTEGRADO\SEMANA6\MDW-Semana6-Security\src\main\java\com\mdw\security\MdwSecurityApplication.java
+C:\Users\Jhordy\Documents\7MO-CICLO\DESARROLLO-WEB-INTEGRADO\SEMANA6\MDW-Semana6-Security\src\main\java\com\mdw\security\repository\LibroRepository.java
+C:\Users\Jhordy\Documents\7MO-CICLO\DESARROLLO-WEB-INTEGRADO\SEMANA6\MDW-Semana6-Security\src\main\java\com\mdw\security\repository\RolRepository.java
+C:\Users\Jhordy\Documents\7MO-CICLO\DESARROLLO-WEB-INTEGRADO\SEMANA6\MDW-Semana6-Security\src\main\java\com\mdw\security\repository\UsuarioRepository.java
+C:\Users\Jhordy\Documents\7MO-CICLO\DESARROLLO-WEB-INTEGRADO\SEMANA6\MDW-Semana6-Security\src\main\java\com\mdw\security\service\CustomUserDetailsService.java
