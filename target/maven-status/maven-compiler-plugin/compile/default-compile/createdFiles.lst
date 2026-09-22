@@ -1,7 +1,4 @@
 com\mdw\security\entity\Rol.class
-com\mdw\security\config\DataInitializer.class
-com\mdw\security\config\SecurityConfig.class
-com\mdw\security\entity\Usuario.class
 com\mdw\security\controller\AdminLibroController.class
 com\mdw\security\entity\Libro.class
 com\mdw\security\MdwSecurityApplication.class
@@ -12,3 +9,6 @@ com\mdw\security\repository\LibroRepository.class
 com\mdw\security\controller\PerfilController.class
 com\mdw\security\repository\RolRepository.class
 com\mdw\security\controller\LibroController.class
+com\mdw\security\config\DataInitializer.class
+com\mdw\security\config\SecurityConfig.class
+com\mdw\security\entity\Usuario.class
