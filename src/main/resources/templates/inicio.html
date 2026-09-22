@@ -1,0 +1,30 @@
+<!-- inicio.html -->
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+</head>
+<body>
+
+<h1>Inicio</h1>
+
+<p>
+    Bienvenido:
+    <span th:text="${username}"></span>
+</p>
+
+<ul>
+    <li><a href="/libros">Ver libros</a></li>
+    <li><a href="/buscar">Buscar libros</a></li>
+    <li><a href="/perfil">Mi perfil</a></li>
+    <li><a href="/admin/libros">Administrar libros</a></li>
+</ul>
+
+<form action="/logout" method="post">
+    <button type="submit">Cerrar sesión</button>
+</form>
+
+</body>
+</html>

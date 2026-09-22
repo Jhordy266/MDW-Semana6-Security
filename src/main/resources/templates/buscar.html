@@ -1,0 +1,45 @@
+<!-- buscar.html -->
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar libros</title>
+</head>
+<body>
+
+<h1>Buscar libros</h1>
+
+<form action="/buscar" method="get">
+    <input type="text"
+           name="q"
+           placeholder="Título o autor"
+           th:value="${q}">
+
+    <button type="submit">Buscar</button>
+</form>
+
+<br>
+
+<table border="1">
+    <tr>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Categoría</th>
+        <th>Estado</th>
+    </tr>
+
+    <tr th:each="libro : ${libros}">
+        <td th:text="${libro.titulo}"></td>
+        <td th:text="${libro.autor}"></td>
+        <td th:text="${libro.categoria}"></td>
+        <td th:text="${libro.estado}"></td>
+    </tr>
+</table>
+
+<br>
+
+<a href="/inicio">Volver</a>
+
+</body>
+</html>
